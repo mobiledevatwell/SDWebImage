@@ -143,7 +143,7 @@ NSString *const SDWebImageDownloadStopNotification = @"SDWebImageDownloadStopNot
 {
     [imageData appendData:data];
 
-    if (CGImageSourceCreateImageAtIndex == NULL)
+    if (&CGImageSourceCreateImageAtIndex == NULL)
     {
         // ImageIO isn't present in iOS < 4
         self.progressive = NO;
